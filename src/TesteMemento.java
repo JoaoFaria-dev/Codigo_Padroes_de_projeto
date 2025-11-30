@@ -34,6 +34,29 @@ public class TesteMemento {
         editor.restaurarEstado(historico.getUltimoMemento());
         System.out.println("Estado restaurado para o penúltimo salvo: " + editor.getEstado());
         */
+
+        /*
+        // Sem Memento - estado exposto diretamente
+            Editor editor = new Editor();
+            editor.setEstado("Versão 1");
+            editor.setEstado("Versão 2");
+            // Para desfazer, precisamos manipular diretamente o estado
+            editor.setEstado("Versão 1"); // código "hardcoded" e acoplado
+
+        // Com Memento - estado encapsulado
+            Editor editor2 = new Editor();
+            Historico historico = new Historico();
+
+            editor2.setEstado("Versão 1");
+            historico.adicionarMemento(editor2.salvarEstado());
+
+            editor2.setEstado("Versão 2");
+            historico.adicionarMemento(editor2.salvarEstado());
+
+            // Restaurando sem acessar detalhes internos
+            editor2.restaurarEstado(historico.getMemento(2));
+
+         */
     }
 
 

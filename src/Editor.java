@@ -16,8 +16,4 @@ public class Editor {
     public void restaurarEstado(Memento memento){
         this.estado = memento.getEstadoSalvo();
     }
-
-
-
-
 }
